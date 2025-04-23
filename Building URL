@@ -1,0 +1,33 @@
+1) Install Python & PIP
+
+2) Install Flask Framework
+pip install flask
+
+3) Create Flask application
+//导入Flask模块，创建Flask应用实例
+from flask import Flask
+//在项目文件夹创建app.py的python文件
+@app=Flask(__name__)
+//When user visits /, call the index() function
+@app.route(‘/’)
+def index():
+	return ‘GoHome’
+
+4) Run Flask application
+//When u run python app.py
+if __name__ == '__main__':
+//Start the development web server
+ app.run()
+
+5) Save & Close app.py
+
+6) Start the app
+-In command line，
+Input==
+python app.py
+Output==
+* Running on
+http://127.0.0.1:5000/
+* Running on
+
+7) Access the URL
