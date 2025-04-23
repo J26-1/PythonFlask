@@ -1,3 +1,5 @@
+//Web Page that only contain string (1 line prob)
+
 1) Install Python & PIP
 
 2) Install Flask Framework
@@ -7,7 +9,9 @@ pip install flask
 //导入Flask模块，创建Flask应用实例
 from flask import Flask
 //在项目文件夹创建app.py的python文件
-@app=Flask(__name__)
+//referencing this file
+app=Flask(__name__)
+//Create index route
 //When user visits /, call the index() function
 @app.route(‘/’)
 def index():
