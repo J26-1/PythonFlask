@@ -1,0 +1,129 @@
+----------------------------------------------------------------------------------------------
+//For main.py
+
+from flask import Flask, render_template
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+----------------------------------------------------------------------------------------------
+//For index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Like Jennie</title>
+</head>
+<body>
+        who are you
+</body>
+</html>
+---------------------------------------------------------------------------------------------
+<title>{% block title %}Default Title{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block content %}
+    <p>Default content goes here.</p>
+    {% endblock %}
+
+
+
+-------------------------------------------------------------------------------------------
+//
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seoul City by Jennie</title>
+</head>
+<body>
+    Ooh<br>
+    Ooh<br>
+    Ooh<br>
+    (Mike WiLL Made-It)<br>
+    Give me hug, need your love, touch my thigh<br>
+    Tell me what puts you in that mind<br>
+    Frame it up, draw me in, do me right<br>
+    Don't you dare leave my sight<br>
+    I could be, be your prize, pick me up<br>
+    Flying lights, paradise<br>
+    In Seoul city (ooh-ooh)<br>
+    I see your soul<br>
+    Seoul city<br>
+    I see your soul<br>
+    Yeah, yeah<br>
+    Hey, ay, hey<br>
+    +82, some miracle<br>
+    Only listen to my general, oh-oh<br>
+    He says my attitude out of control<br>
+    Tell me what to do, Mr. General, oh-oh<br>
+    Would you make me your boss, pretty please?<br>
+    Pretty please, let me ease your mind<br>
+    Look at me, can you breathe? (Ah, ah)<br>
+    I could give you life<br>
+    Apple of, of my eye, pick me up<br>
+    Flying lights, paradise<br>
+    In Seoul city (ooh-ooh)<br>
+    I see your soul<br>
+    Seoul city<br>
+    I see your soul<br>
+    Yeah, yeah<br>
+    Hey, ay, hey<br>
+    +82, some miracle<br>
+    Only listen to my general, oh-oh<br>
+    He says my attitude out of control<br>
+    Tell me what to do, Mr. General, oh-oh<br>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
