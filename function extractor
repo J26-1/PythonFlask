@@ -1,15 +1,25 @@
 //To extract text from files (PDF & DOCX)
 
+//To write PDF Files
 import fitz  # PyMuPDF for PDF
+//To write Word Files
 from docx import Document
 
+//compile all the texts into one big string
 def extract_text_from_pdf(path):
+    //open the pdf file
     doc = fitz.open(path)
+    //assign empty string to this variable
     text = ""
+    //loop through each page
     for page in doc:
+        //extract text from each page and append
         text += page.get_text()
     return text
 
+
 def extract_text_from_docx(path):
     doc = Document(path)
+    //p.text --> gets the text content of each paragraph
+    //"".join(...) --> combines them into one string
     return "\n".join([p.text for p in doc.paragraphs])
