@@ -1,0 +1,37 @@
+Display user input in other html
+
+----------------------------------------------------------------------
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def form():
+    return render_template('form.html')
+
+
+@app.route('/result', methods=['POST'])
+def result():
+    name = request.form['name']  # Get the user input from the form
+    return render_template('result.html', name=name)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+-------------------------------------------------------------------
+This is result.html
+
+<h1>Hello, {{ name }}!</h1>
+-------------------------------------------------------------------
+This is form.html
+
+<form action="/result" method="POST">
+  <label for="nameVar">Enter your name:</label>
+  <input type="text" name="nameVar" id="nameVar" required>
+  <button type="submit">Submit</button>
+</form>
+-------------------------------------------------------------------
+
+
